@@ -1,0 +1,25 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.frame{
+    border: 10px solid black;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    position: relative;
+}
+
+.hand{
+    border: 2px solid black;
+    position: absolute;
+    top: 50%;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition: .5s;
+    width: 50%;
+}
+
