@@ -1,0 +1,22 @@
+body{
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: gray;
+    color: #151241
+}
+.key{
+    display: inline-block;
+    padding: 20px;
+    border: 1px solid #000;
+    transition: .05s;
+    transform: scale(1);
+}
+
+.key.pressed{
+    border-color: yellow;
+    transform: scale(1.1);
+    box-shadow: yellow;
+}
