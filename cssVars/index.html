@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Css Variables</title>
+</head>
+<body>
+<h1>This is a test</h1>
+<label for="base">
+    Base Color
+</label>
+<input type="color" name="base">
+<label for="size">
+    Size
+</label>
+<input type="number" name="size" data-sizing="px">
+<style>
+    :root {
+        --base: red;
+        --size: 30px;
+    }
+
+    h1 {
+        color: var(--base);
+        font-size: var(--size);
+    }
+</style>
+<script type="application/javascript">
+    const inputs = document.querySelectorAll('input');
+
+    function handleChange() {
+        const suffix = this.dataset.sizing || '';
+        document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
+    }
+
+    inputs.forEach(input => input.addEventListener('change', handleChange));
+    inputs.forEach(input => input.addEventListener('keyup', handleChange));
+
+
+</script>
+</body>
+</html>
